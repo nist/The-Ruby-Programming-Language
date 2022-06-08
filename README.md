@@ -1,15 +1,13 @@
-## Example files for the title:  
-  
-# The Ruby Programming Language, by David Flanagan
-  
-[![The Ruby Programming Language, by David Flanagan](http://akamaicovers.oreilly.com/images/9780596516178/cat.gif)](https://www.safaribooksonline.com/library/view/title/9780596516178//)
-  
-The following applies to example files from material published by O’Reilly Media, Inc. Content from other publishers may include different rules of usage. Please refer to any additional usage rights explained in the actual example files or refer to the publisher’s website.
-  
-O'Reilly books are here to help you get your job done. In general, you may use the code in O'Reilly books in your programs and documentation. You do not need to contact us for permission unless you're reproducing a significant portion of the code. For example, writing a program that uses several chunks of code from our books does not require permission. Answering a question by citing our books and quoting example code does not require permission. On the other hand, selling or distributing a CD-ROM of examples from O'Reilly books does require permission. Incorporating a significant amount of example code from our books into your product's documentation does require permission.
-  
-We appreciate, but do not require, attribution. An attribution usually includes the title, author, publisher, and ISBN.
-  
-If you think your use of code examples falls outside fair use or the permission given here, feel free to contact us at <permissions@oreilly.com>.
-  
-Please note that the examples are not production code and have not been carefully testing. They are provided "as-is" and come with no warranty of any kind.
+#The Ruby Programming Language
+
+I bought the book [The Ruby Programming Language](https://www.oreilly.com/library/view/the-ruby-programming/9780596516178/) when it was published. I was already a Ruby programmer, a language that I love and was refreshing in a sea of corporate framework (J2EE, .Net). My copy was pretty well wear out, so I throw it in recycle bin a couple of years ago. Yesterday, I found in [a street library](https://www.facebook.com/BibliothequeDeLaRue/) a copy that looks like new. Time to revisit this book by David Flanagan and Yukihiro Matsumoto and published by
+O'Reilly Media in 2008.
+
+I wrote a small Ruby program to illustrate each concept along my reading.
+
+Since I'm a [TDD](https://www.coscreen.co/blog/tdd-and-bdd/#:~:text=TDD%20stands%20for%20test%2Ddriven,development%20of%20the%20production%20code.) advocate, I also wrote the test for it, using the default testing library, `test/unit`.
+
+The book was written when the version 1.9 was coming out.
+
+I use the [latest version of Ruby](https://www.ruby-lang.org/en/), which could mean some change with the book.
+
