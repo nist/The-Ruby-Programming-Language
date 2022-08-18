@@ -168,3 +168,143 @@ puts ellipsis
 
 a = 0
 puts "#{a=a+1}" * 3
+
+puts "\n3.2.4 Accessing Characters and Substrings"
+puts ""
+
+s = 'hello'
+puts s[0]
+puts s[s.length-1]
+puts s[-1]
+puts s[-2]
+puts s[-s.length]
+puts s[s.length]
+
+puts ""
+s = 'hello'
+puts "s: #{s}"
+s[0] = ?H
+puts "s[0] = ?H: #{s}"
+s[-1] = ?O
+puts "s[-1] = ?O: #{s}"
+s[s.length] = ?!
+puts "s[s.length] = ?!: #{s}"
+
+puts ""
+s = 'hello'
+puts "s: #{s}"
+s[-1] = ""
+puts "s[-1] = \"\": #{s}"
+s[-1] = "p!"
+puts "s[-1] = \"p!\": #{s}"
+
+puts ""
+s = 'hello'
+puts "s: #{s}"
+puts "s[0,2]: #{s[0,2]}"
+puts "s[-1,1]: #{s[-1,1]}"
+puts "s[0,0]: #{s[0,0]}"
+puts "s[0,10]: #{s[0,10]}"
+puts "s[s.length,1]: #{s[s.length,1]}"
+puts "s[s.length+1,1]: #{s[s.length+1,1]}"
+puts "s[0,-1]: #{s[0,-1]}"
+
+puts ""
+s = 'hello'
+puts "s: #{s}"
+s[0,1] = "H"
+puts "s[0,1] = \"H\": #{s}"
+s[s.length,0] = " world"
+puts "s[s.length,0] = \" world\": #{s}"
+s[5,0] = ","
+puts "s[5,0] = \",\": #{s}"
+s[5,6] = ""
+puts "s[5,6] = \"\": #{s}"
+
+puts ""
+s = 'hello'
+puts "s: #{s}"
+puts "s[2..3]: #{s[2..3]}"
+puts "s[-3..-1]: #{s[-3..-1]}"
+puts "s[0..0]: #{s[0..0]}"
+puts "s[0...0]: #{s[0...0]}"
+puts "s[2..1]: #{s[2..1]}"
+puts "s[7..10]: #{s[7..10]}"
+s[-2..-1] = "p!"
+puts "s[-2..-1] = \"p!\": #{s}"
+s[0...0] = "Please "
+puts "s[0...0] = \"Please \": #{s}"
+s[6..10] = ""
+puts "s[6..10] = \"\": #{s}"
+
+puts ""
+s = 'hello'
+puts "s: #{s}"
+while(s["l"])
+  s["l"] = "L"
+end
+puts "after the loop: #{s}"
+
+puts ""
+s = 'hello'
+puts "s: #{s}"
+s[/[aeiou]/] = '*'
+puts "after regexp: #{s}"
+
+puts "\n3.2.5 Iterating Strings"
+puts ""
+
+s = "¥1000"
+puts "s: #{s}"
+s.each_char {|x| print "#{x} "}
+puts ""
+0.upto(s.size-1) {|i| print "#{s[i]} "}
+puts ""
+
+puts "\n3.2.6 Encoding and Multibyte"
+puts ""
+
+# _*_ coding: utf-8 _*_
+s = "2×2=4"
+puts "s: #{s}"
+puts "s.bytesize: #{s.bytesize}"
+s.bytesize.times {|i| print s.getbyte(i), " "}
+puts ""
+puts "s.length: #{s.length}"
+s.length.times {|i| print s[i]," "}
+puts ""
+s.setbyte(5, s.getbyte(5)+1)
+puts "s at the end: #{s}"
+puts ""
+
+s = "2×2=4"
+puts "s: #{s}"
+puts "s encoding: #{s.encoding}"
+t = "2+2=4"
+puts "t: #{t}"
+puts "t encoding: #{t.encoding}"
+puts ""
+
+# text = stream.readline.force_encoding("utf-8")
+# puts "After encoding: #{text}"
+# bytes = text.dup.force_encoding(nil)
+
+s = "\xa4".force_encoding("utf-8")
+puts s.valid_encoding?
+puts ""
+
+euro1 = "\u20AC"
+puts euro1
+puts euro1.encoding
+puts euro1.bytesize
+puts ""
+
+euro2 = euro1.encode("iso-8859-15")
+puts euro2.inspect
+puts euro2.encoding
+puts euro2.bytesize
+puts ""
+
+euro3 = euro2.encode("utf-8")
+puts euro1 == euro3
+puts ""
