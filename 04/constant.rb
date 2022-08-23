@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+puts "::ARGF: #{::ARGF}"
+puts "::ARGV: #{::ARGV}"
+puts "DATA: #{DATA.gets}"
+puts "ENV: #{ENV}"
+puts "RUBY_COPYRIGHT: #{RUBY_COPYRIGHT}"
+puts "RUBY_DESCRIPTION: #{RUBY_DESCRIPTION}"
+puts "RUBY_ENGINE: #{RUBY_ENGINE}"
+puts "RUBY_ENGINE_VERSION: #{RUBY_ENGINE_VERSION}"
+puts "RUBY_PATCHLEVEL: #{RUBY_PATCHLEVEL}"
+puts "RUBY_PLATFORM: #{RUBY_PLATFORM}"
+puts "RUBY_RELEASE_DATE: #{RUBY_RELEASE_DATE}"
+puts "RUBY_REVISION: #{RUBY_REVISION}"
+puts "RUBY_VERSION: #{RUBY_VERSION}"
+puts "STDERR: #{STDERR}"
+puts "STDIN: #{STDIN}"
+puts "STDOUT: #{STDOUT}"
+
+__END__
+Data section...
